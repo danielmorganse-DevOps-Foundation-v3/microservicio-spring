@@ -33,3 +33,9 @@ steps:
     sonarQubeRunAnalysis: true
     isJacocoCoverageReportXML: true
 - task: SonarCloudPublish@1
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockerhub-personal'
+    repository: 'devops-foundation-v3-ms-spring'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
