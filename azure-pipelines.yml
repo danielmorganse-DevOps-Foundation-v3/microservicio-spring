@@ -1,5 +1,3 @@
-variables:
-  imageTag: '$(Build.BuildId)'
  
 trigger:
 - feature-*
