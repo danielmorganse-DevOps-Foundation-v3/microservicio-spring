@@ -13,7 +13,7 @@ public class HomeController {
 	public HomeController(GreetingService greetService) {
 		this.greetService = greetService;
 	}
-	@RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value = "/", method = {RequestMethod.GET})
 	public @ResponseBody String greeting()  { return this.greetService.greet(); }
 
 }
