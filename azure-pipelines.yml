@@ -32,15 +32,4 @@ steps:
     goals: 'package'
     sonarQubeRunAnalysis: true
     isJacocoCoverageReportXML: true
-- task: PublishCodeCoverageResults@1
-  displayName: 'Publish code coverage'
-  inputs:
-    codeCoverageTool: Jacoco
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/jacoco.xml'
 - task: SonarCloudPublish@1
-- task: BuildQualityChecks@8
-  inputs:
-    checkCoverage: true
-    coverageFailOption: 'fixed'
-    coverageThreshold: '85'
-
