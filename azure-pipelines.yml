@@ -39,3 +39,14 @@ steps:
     repository: 'devdams/devops-foundation-v3-ms-spring'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: KubectlInstaller@0
+  inputs:
+    kubectlVersion: 'latest'
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'None'
+    command: 'apply'
+    arguments: '-f deployment-app.yaml'
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Container Registry'
+    dockerRegistryEndpoint: 'dockerhub-personal'
