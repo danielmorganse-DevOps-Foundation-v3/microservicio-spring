@@ -46,7 +46,9 @@ steps:
   inputs:
     connectionType: 'None'
     command: 'apply'
-    arguments: '-f deployment-app.yaml'
+    #arguments: '-f deployment-app.yaml'
+    useConfigurationFile: true
+    configuration: 'deployment-app.yaml'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Container Registry'
     dockerRegistryEndpoint: 'dockerhub-personal'
