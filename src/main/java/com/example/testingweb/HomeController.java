@@ -2,6 +2,7 @@ package com.example.testingweb;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -12,7 +13,7 @@ public class HomeController {
 	public HomeController(GreetingService greetService) {
 		this.greetService = greetService;
 	}
-	@RequestMapping("/")
+	@RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
 	public @ResponseBody String greeting()  { return this.greetService.greet(); }
 
 }
