@@ -28,6 +28,8 @@ steps:
     jdkVersionOption: 'default'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    codeCoverageToolOption: 'JaCoCo'
     goals: 'package'
     sonarQubeRunAnalysis: true
+    isJacocoCoverageReportXML: true
 - task: SonarCloudPublish@1
