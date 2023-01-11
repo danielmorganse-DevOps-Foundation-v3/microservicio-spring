@@ -7,11 +7,19 @@ trigger:
 pool: 'Default'
 
 steps:
+- checkout: self
+  fetchDepth: 0
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'sonarcloud'
     organization: 'danielmorganse'
     scannerMode: 'Other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner,
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=danielmorganse_microservicio-spring
+      sonar.projectName=microservicio-spring
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
