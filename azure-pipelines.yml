@@ -36,6 +36,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerhub-personal'
-    repository: 'devops-foundation-v3-ms-spring'
+    repository: 'devdams/devops-foundation-v3-ms-spring'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
