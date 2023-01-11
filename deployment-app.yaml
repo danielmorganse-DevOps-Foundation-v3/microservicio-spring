@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mss-demo-lab
-        image: devdams/devops-foundation-v3-ms-spring:${imageTag}
+        image: devdams/devops-foundation-v3-ms-spring:latest
         ports:
         - containerPort: 8080
