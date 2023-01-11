@@ -33,3 +33,9 @@ steps:
     sonarQubeRunAnalysis: true
     isJacocoCoverageReportXML: true
 - task: SonarCloudPublish@1
+- task: BuildQualityChecks@8
+  inputs:
+    checkCoverage: true
+    coverageFailOption: 'fixed'
+    coverageType: 'branches'
+    coverageThreshold: '85'
