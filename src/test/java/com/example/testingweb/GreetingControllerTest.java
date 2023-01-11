@@ -27,10 +27,9 @@ class GreetingControllerTest {
     @MockBean
     GreetingService greetingService;
     @Test
-    public void shouldReturnDefaultMessage() throws Exception {
+    void greeting() throws Exception {
         Mockito.when(greetingService.greet()).thenReturn("Finaliza el curso DevOps Foundation v3");
         this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
-              .andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3")));
+                .andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3")));
     }
-
 }
