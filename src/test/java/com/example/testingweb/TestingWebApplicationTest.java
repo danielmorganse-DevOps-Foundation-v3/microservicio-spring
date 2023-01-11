@@ -26,7 +26,4 @@ public class TestingWebApplicationTest {
 				.andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3")));
 	}
 
-	@Test
-	void main() {
-	}
 }

@@ -7,7 +7,7 @@ import javax.annotation.Generated;
 
 @SpringBootApplication
 public class TestingWebApplication {
-
+	private TestingWebApplication(){}
 	public static void main(String[] args) {
 		SpringApplication.run(TestingWebApplication.class, args);
 	}
