@@ -4,8 +4,7 @@ variables:
 trigger:
 - feature-*
 
-pool:
-  vmImage: ubuntu-latest
+pool: 'Default'
 
 steps:
 - task: SonarCloudPrepare@1
