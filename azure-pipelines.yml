@@ -10,6 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'sonarcloud'
+    scannerMode: 'Other'
+    organization: '${{ secret.SONAR_ORGANIZATION}}'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -20,4 +25,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    sonarQubeRunAnalysis: true
+
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+
