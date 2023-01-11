@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mss-demo-lab-deployment
+  labels:
+    app: mss-demo-lab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mss-demo-lab
+  template:
+    metadata:
+      labels:
+        app: mss-demo-lab
+    spec:
+      containers:
+      - name: mss-demo-lab
+        image: devdams/devops-foundation-v3-ms-spring
+        ports:
+        - containerPort: 8080
