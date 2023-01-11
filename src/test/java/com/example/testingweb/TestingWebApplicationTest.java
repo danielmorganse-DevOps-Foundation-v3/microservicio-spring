@@ -25,4 +25,8 @@ public class TestingWebApplicationTest {
 		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
 				.andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3")));
 	}
+
+	@Test
+	void main() {
+	}
 }
