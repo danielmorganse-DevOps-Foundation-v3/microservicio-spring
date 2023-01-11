@@ -12,7 +12,7 @@ steps:
   inputs:
     SonarCloud: 'sonarcloud'
     scannerMode: 'Other'
-    organization: '${{ SONAR_ORGANIZATION }}'
+    organization: '$(SONAR_ORGANIZATION)'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
