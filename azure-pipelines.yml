@@ -36,7 +36,7 @@ steps:
   displayName: 'Publish code coverage'
   inputs:
     codeCoverageTool: Jacoco
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/site/jacoco.xml'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/jacoco.xml'
 - task: SonarCloudPublish@1
 - task: BuildQualityChecks@8
   inputs:
