@@ -22,6 +22,6 @@ public class HttpRequestTest {
 	@Test
 	public void greetingShouldReturnDefaultMessage() throws Exception {
 		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
-				String.class)).contains("Finaliza el curso DevOps Foundation v3");
+				String.class)).contains("Finaliza el curso DevOps Foundation v3 - Daniel Morgan");
 	}
 }

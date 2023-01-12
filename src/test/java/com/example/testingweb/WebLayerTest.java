@@ -27,9 +27,9 @@ public class WebLayerTest {
 
 	@Test
 	public void shouldReturnDefaultMessage() throws Exception {
-		Mockito.when(greetingService.greet()).thenReturn("Finaliza el curso DevOps Foundation v3");
+		Mockito.when(greetingService.greet()).thenReturn("Finaliza el curso DevOps Foundation v3 - Daniel Morgan");
 		this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3")));
+				.andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3 - Daniel Morgan")));
 	}
 }
 //end::test[]

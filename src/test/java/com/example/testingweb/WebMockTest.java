@@ -25,8 +25,8 @@ public class WebMockTest {
 
 	@Test
 	public void greetingShouldReturnMessageFromService() throws Exception {
-		when(service.greet()).thenReturn("Finaliza el curso DevOps Foundation v3");
+		when(service.greet()).thenReturn("Finaliza el curso DevOps Foundation v3 - Daniel Morgan");
 		this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
-				.andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3")));
+				.andExpect(content().string(containsString("Finaliza el curso DevOps Foundation v3 - Daniel Morgan")));
 	}
 }
