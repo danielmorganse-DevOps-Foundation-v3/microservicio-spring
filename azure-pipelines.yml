@@ -35,6 +35,7 @@ steps:
   inputs:
     containerRegistry: 'dockerhub-personal'
     repository: 'devdams/devops-foundation-v3-ms-spring'
+    tags: 'latest'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 - task: KubectlInstaller@0
